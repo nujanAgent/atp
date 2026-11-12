@@ -27,6 +27,16 @@ Bug reports, questions about the specification and pull requests are welcome.
 - Follow the Kotlin coding conventions (`kotlin.code.style=official`) and the style of the code around the change. New
   source and documentation files start with an `SPDX-License-Identifier: Apache-2.0` line, as the existing ones do.
 
+## Developer Certificate of Origin
+
+Every commit in a pull request is signed off, which certifies the
+[Developer Certificate of Origin](https://developercertificate.org/): that you wrote the change, or otherwise have the
+right to submit it under this repository's license. Sign off with `git commit -s`, which adds a line such as:
+
+```
+Signed-off-by: Your Name <you@example.com>
+```
+
 ## License
 
 Unless you state otherwise, a contribution you submit for inclusion is licensed under the Apache License 2.0, as
