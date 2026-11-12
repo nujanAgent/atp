@@ -1,0 +1,6 @@
+# The Unix start script keeps LF line endings and the Windows scripts CRLF on every checkout.
+/gradlew        text eol=lf
+*.bat           text eol=crlf
+
+# The wrapper jar is binary.
+*.jar           binary
