@@ -17,8 +17,9 @@ A useful report includes:
 - the steps, or a test, that show the problem;
 - the impact.
 
-A fix is released as a new tagged version with an entry in the [changelog](docs/release/CHANGELOG.md). An app that
-vendors the kit takes the fix by exporting that version.
+A report is acknowledged within 7 days, and within 30 days it has a fix or a plan with a date. A fix is released as a
+new tagged version with an entry in the [changelog](docs/release/CHANGELOG.md). An app that vendors the kit takes the
+fix by exporting that version.
 
 ## Scope
 

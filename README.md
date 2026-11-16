@@ -14,7 +14,7 @@ providers, an Android provider kit, and a sample provider.
 - The specification is a draft at version 0.1. It freezes the Binder interfaces (binding version 1), the wire values
   and the golden fixtures; anything else may change before 1.0. It covers MCP tools at protocol version `2025-06-18`;
   resources and prompts are not covered yet.
-- The provider kit is at version `atp-v0.22`. Its known issues are listed at the end of the
+- The provider kit is at version `atp-v0.24`. Its known issues are listed at the end of the
   [provider quickstart](docs/release/QUICKSTART_PROVIDER.md).
 - NuJan, an Android agent app, is the reference host.
 
