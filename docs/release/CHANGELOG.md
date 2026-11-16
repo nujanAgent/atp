@@ -10,8 +10,14 @@ Every drop below has specification version `0.1` (`SPEC_VERSION`), binding versi
 specification's text grew across drops within version 0.1. The Binder interfaces changed once, in `atp-v0.2`; from
 then on the AIDL and its transaction table are unchanged, and later drops only add entries to `fixtures/names.json`.
 
-The first public release is the specification at version 0.1 with the provider kit at `atp-v0.22`. Earlier versions
+The first public release is the specification at version 0.1 with the provider kit at `atp-v0.24`. Earlier versions
 were not published as tags in this repository; their entries are kept as the record of changes.
+
+## atp-v0.24 (2026-11-16)
+
+`NOTICE` and the paper give NuJan's site as https://nujan-agent.com, and `SECURITY.md` says how soon a report is
+answered. The specification, the AIDL, the fixtures and the code are those of `atp-v0.22`; `atp-v0.23` changed only
+`NOTICE`.
 
 ## atp-v0.22 (2026-11-02)
 

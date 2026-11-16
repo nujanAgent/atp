@@ -3,7 +3,7 @@
 # ATP security model
 
 This document states what ATP protects, against whom, how, and what it leaves to others. It covers ATP specification
-version 0.1 (`spec/SPEC.md`, which is normative; § numbers refer to it) and the provider kit at drop `atp-v0.22`.
+version 0.1 (`spec/SPEC.md`, which is normative; § numbers refer to it) and the provider kit at drop `atp-v0.24`.
 
 ATP lets an app (the provider) offer MCP tools to an agent app (the host) on the same Android phone. Its security rests
 on one rule: every trust anchor is something the platform enforces, never what a peer says about itself (§2 item 3).
@@ -181,7 +181,7 @@ device.
 
 ## 5. Who does what
 
-| Concern | Platform | ATP specification | Provider kit (`atp-v0.22`) | Host policy |
+| Concern | Platform | ATP specification | Provider kit (`atp-v0.24`) | Host policy |
 |---|---|---|---|---|
 | Who is calling | uid, package, signer | Checks on every call; signer ratchet | `CallerChecks`, run on every call | Checks the provider's uid and signer |
 | Consent | Caller identity of an activity result | Two sheets, nonce, explicit outcome, limits | Consent screen, nonce book, limits | Its own sheet; when to ask |
@@ -190,7 +190,7 @@ device.
 | Transport | Descriptors over Binder | Pipes, framing, bounds, close reasons | Channel server, write queue | Channel client |
 | Model safety | | Instructions as the provider's text; Stop not retried | | How results reach the model |
 
-## 6. The provider kit at `atp-v0.22`
+## 6. The provider kit at `atp-v0.24`
 
 The kit implements the provider's side of everything above. Points that bear on security, including known gaps:
 
@@ -225,7 +225,7 @@ The kit implements the provider's side of everything above. Points that bear on 
 
 ## 8. Testing and review
 
-- **Unit tests in the repository at `atp-v0.22`.** 54 in the wire module and 102 in the provider kit, including the
+- **Unit tests in the repository at `atp-v0.24`.** 54 in the wire module and 102 in the provider kit, including the
   caller checks, nonces, the provider's policy for `hello`, `openChannel`, expiry and release, consent limits, text
   cleaning, and the channel server's bounds and stall handling. The specification says that not every MUST has a test of
   its own yet (§11).

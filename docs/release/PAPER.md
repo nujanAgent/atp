@@ -4,7 +4,7 @@
 
 **The App Tools Protocol, specification version 0.1**
 
-NuJan, https://www.nujan-agent.com
+NuJan, https://nujan-agent.com
 
 Draft for review, November 2026. The specification, the wire module and the provider kit are licensed under Apache-2.0.
 
@@ -64,7 +64,7 @@ This paper makes four contributions:
 
 This is the first public release of the ATP specification, version 0.1. The wire value `SPEC_VERSION` is `"0.1"`, the
 Binder interfaces are frozen at binding version 1, and channels speak MCP protocol version `2025-06-18`. The provider
-kit described here is the drop tagged `atp-v0.22`. The specification's status is v0: it freezes the Binder surface,
+kit described here is the drop tagged `atp-v0.24`. The specification's status is v0: it freezes the Binder surface,
 the wire values and the fixtures, and everything else may still change before 1.0 [18].
 
 ## 2 Background and related work
@@ -595,7 +595,7 @@ to the next call. The kit's main Kotlin sources are 2,990 lines, comments includ
 Consumers vendor the kit as a drop: `tools/export-drop.ps1` copies the AIDL, the wire module, the kit, the fixtures,
 the specification, LICENSE and NOTICE byte for byte from a tagged commit, and writes a provenance README and a
 `SHA256SUMS` file, which the consuming repositories check in their own tests. The build files for the vendored modules
-belong to the consumer. Drops are named by their tags, `atp-v0.N`; this paper describes `atp-v0.22`. The Binder
+belong to the consumer. Drops are named by their tags, `atp-v0.N`; this paper describes `atp-v0.24`. The Binder
 interfaces changed once, in `atp-v0.2`, when `getInterfaceVersion` was removed; from then on the AIDL and its
 transaction table are unchanged, and later drops only add entries to the fixture of names.
 
@@ -622,7 +622,7 @@ tool in 26 lines.
 
 ### 7.1 Tests and fixtures
 
-At `atp-v0.22` the repository holds 54 unit tests for the wire module, 102 for the provider kit and 2 for the sample,
+At `atp-v0.24` the repository holds 54 unit tests for the wire module, 102 for the provider kit and 2 for the sample,
 and 16 golden fixtures. The wire module's tests read every fixture, and fail when a code, a name or a table differs
 from it or when a fixture is added that no test reads. The kit's tests cover the caller checks and the signer ratchet,
 nonces, the provider's policy for `hello`, `openChannel`, expiry and release, consent limits, text cleaning, groups set
@@ -669,7 +669,7 @@ extension.
 and `IDENTITY_CHANGED`, are reserved values that nothing sends yet, and the consent screen does not yet narrow its
 offer to the groups the host asked for. Changes to the specification are proposed as issues in its repository.
 
-**Kit gaps in `atp-v0.22`.** Results cannot yet carry a `resource_link`, so the
+**Kit gaps in `atp-v0.24`.** Results cannot yet carry a `resource_link`, so the
 provider-to-host file handoff is not available to kit users. Tool code has no way to send progress notifications, so
 long work needs a job handle. The typed parameters lack nested objects, per-value descriptions of choices and schemas
 from `@Serializable` classes.

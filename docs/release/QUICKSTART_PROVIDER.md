@@ -3,7 +3,7 @@
 # Quickstart: offer a tool from your Android app
 
 This guide turns an Android app into an ATP provider: an app that offers MCP tools to an agent app (a host) on the
-same phone. It uses the provider kit at drop `atp-v0.22`, which implements ATP specification version 0.1.
+same phone. It uses the provider kit at drop `atp-v0.24`, which implements ATP specification version 0.1.
 
 The kit does the protocol work: the Binder service that hosts bind to, the consent screen in its own process, grants
 per group of tools (on, ask each time, off), the question the person answers for a call in a group set to ask, the
@@ -33,7 +33,7 @@ Apps take the kit as a drop: the tagged sources copied byte for byte into the ap
 this repository:
 
 ```sh
-pwsh tools/export-drop.ps1 -Tag atp-v0.22 -Dest ../your-app/third_party/atp
+pwsh tools/export-drop.ps1 -Tag atp-v0.24 -Dest ../your-app/third_party/atp
 ```
 
 The script accepts only a folder named `third_party/atp`, because it deletes that folder's old files before writing
@@ -296,7 +296,7 @@ AtpProvider.initialGrant = { caller, groups ->
 ```
 
 The consent screen offers the groups `initialGrant` turns on and names the rest as staying off until the person turns
-them on in your app. In `atp-v0.22` it does not read the groups the host says it asks for.
+them on in your app. In `atp-v0.24` it does not read the groups the host says it asks for.
 
 ## 5. Notifications for groups that ask
 
@@ -405,7 +405,7 @@ The kit enforces most of SPEC.md for you. What remains is yours:
 - If you show a sign that a host is at work, take it down at most 30 seconds after the last call, and make Stop end
   the turn, not the connection.
 
-## Known issues in `atp-v0.22`
+## Known issues in `atp-v0.24`
 
 - A result cannot carry an MCP `resource_link`, so the provider-to-host file handoff (SPEC.md 9.2) is not available.
 - Tool code cannot send progress notifications, so long work needs a job handle.

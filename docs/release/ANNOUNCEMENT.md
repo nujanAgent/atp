@@ -3,7 +3,7 @@
 # ATP 0.1: MCP tools between Android apps on the same phone
 
 This is the first public release of ATP, the App Tools Protocol: specification version 0.1, with the Android provider
-kit at version `atp-v0.22`. Both are open source under the Apache License 2.0.
+kit at version `atp-v0.24`. Both are open source under the Apache License 2.0.
 
 ATP lets an Android app offer tools to an agent app on the same phone. The tools are Model Context Protocol (MCP)
 tools, and the messages between the two apps are MCP's messages, unchanged. ATP adds what Android needs and MCP does
@@ -82,6 +82,8 @@ Source: https://github.com/nujanAgent/atp
 - MCP resources and prompts, which version 0.1 does not cover.
 
 If you build a provider or a host, say in an issue what was hard and what the specification leaves unclear.
+
+Source: https://github.com/nujanAgent/atp.
 
 "Model Context Protocol" and "MCP" are trademarks of LF Projects, LLC; ATP is an independent protocol for use with MCP.
 Android is a trademark of Google LLC.
